@@ -1,0 +1,74 @@
+@charset 'utf-8';
+
+/*
+    원칙1. CSS는 HTML 문서가 읽히는 순서대로 작성한다.
+*/
+
+/********
+    reset
+********/
+*         { margin:0; padding:0; }
+li        { list-style:none; }
+a         { color:inherit; text-decoration:none; }
+fieldset,
+button    { border:0; background:none; margin:0; padding:0; }
+body      { background-color:#323232; color:#929292; font-family:'Noto Sans KR','sans-serif'; font-size:16px; }
+
+/******
+    공통
+******/
+.container        { margin:0 auto; width:1200px; }
+.sr-only          { height:0px; left:-10000px; overflow:hidden; position:absolute; width:0px; }
+#skip-nav         { border-bottom:1px solid #ffffff; color:#ffffff; background:#999999; background:rgba(0, 0, 0, 0.6); font-size:16px; left:0; line-height:40px; position:fixed; text-align:center; transition:top 0.3s; top:-40px; width:100%; z-index:10000; }
+#skip-nav:focus   { top:0; }
+.indent1          { margin-left:30px; }
+.indent2          { margin-left:60px; }
+
+/****** 
+    화면
+******/
+div.wrap { height:100%; overflow:hidden; width:100%; }
+
+/****** 
+    상단
+******/
+div.top-menu               { background:rgba(255,255,255,0.1); overflow:hidden; position:fixed; width:100%; z-index:999; }
+div.top-menu dl            { float:left; }
+div.top-menu dl dt,        
+div.top-menu dl dd         { display:inline-block; }
+div.top-menu dl dt         { box-sizing:border-box; padding-left:10px; }
+div.top-menu dl dt img     { height:20px; line-height:30px; vertical-align:top; }
+div.top-menu dl dd         { height:100%; margin-left:16px; }
+div.top-menu dl dd a       { display:block; height:100%; width:100%; }
+div.top-menu dl dd a:hover { background:rgba(255,255,255,0.1); }
+div.top-menu ul            { float:right; }
+div.top-menu ul li         { display:inline-block; height:20px; line-height:30px; margin-right:16px; }
+
+/*********
+    좌측영역
+*********/
+section.left                 { box-sizing:border-box; background-color:#29292A; height:100%; left:0; position:absolute; padding-top:30px; top:0px; width:20%; }
+section.left h2              { font-size:14px; padding:5px 10px; }
+section.left dl              { box-sizing:border-box; margin-top:2px; width:100%; }
+section.left dl dt           { background:#3B3B3B; margin-bottom:2px; padding:2px 10px; }
+section.left dl dt    strong { margin-left:5px; }
+section.left dl dd           { padding-left:24px; margin-bottom:2px; }
+section.left dl dd.on        { color:#fff; font-weight:900; }
+section.left dl dd    i      { display:inline-block; text-align:center; width:20px; }
+
+/********* 
+    우측영역 
+*********/
+section.right                         { box-sizing:border-box; background-color:#232323; height:100%; overflow:hidden; position:absolute; padding-top:30px; right:0; top:0px; width:80%; }
+section.right ul.line                 { float:left; width:40px; }
+section.right ul.line li              { text-align:right; }
+section.right main                    { margin-left:70px; }
+section.right main dl                 { text-align:center; width:100%; }
+section.right main dl dd              { display:none; }
+section.right main dl dd.on           { display:block; }
+section.right main dl dd    p.header,
+section.right main dl dd    p.footer  { position:fixed; font-size:14px; text-align:left; }
+section.right main dl dd    p.header  { top:30px; }
+section.right main dl dd    p.footer  { bottom:0; }
+section.right main dl dd    p.text    { font-size:60px; padding:80px 0; position:absolute; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); width:100%; }
+section.right main dl dd    p.code    { text-align:left; }
