@@ -59,16 +59,19 @@ section.left dl dd    i      { display:inline-block; text-align:center; width:20
 /********* 
     우측영역 
 *********/
-section.right                         { box-sizing:border-box; background-color:#232323; height:100%; overflow:hidden; position:absolute; padding-top:30px; right:0; top:0px; width:80%; }
-section.right ul.line                 { float:left; width:40px; }
-section.right ul.line li              { text-align:right; }
-section.right main                    { margin-left:70px; }
-section.right main dl                 { text-align:center; width:100%; }
-section.right main dl dd              { display:none; }
-section.right main dl dd.on           { display:block; }
-section.right main dl dd    p.header,
-section.right main dl dd    p.footer  { position:fixed; font-size:14px; text-align:left; }
-section.right main dl dd    p.header  { top:30px; }
-section.right main dl dd    p.footer  { bottom:0; }
-section.right main dl dd    p.text    { font-size:60px; padding:80px 0; position:absolute; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); width:100%; }
-section.right main dl dd    p.code    { text-align:left; }
+section.right                                { box-sizing:border-box; background-color:#232323; height:100%; overflow:hidden; position:absolute; padding-top:30px; right:0; top:0px; width:80%; }
+section.right ul.line                        { float:left; width:40px; }
+section.right ul.line li                     { text-align:right; }
+section.right main                           { margin-left:70px; }
+section.right main dl                        { text-align:center; width:100%; }
+section.right main dl dd                     { display:none; }
+section.right main dl dd.on                  { display:block; }
+section.right main dl dd    p.header,       
+section.right main dl dd    p.footer         { position:fixed; font-size:14px; text-align:left; }
+section.right main dl dd    p.header         { top:30px; }
+section.right main dl dd    p.footer         { bottom:0; }
+section.right main dl dd    p.text           { font-size:60px; padding:80px 20px 80px 0; position:absolute; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); width:90%; }
+section.right main dl dd    p.code           { text-align:left; }
+section.right main dl dd    p         a      { text-decoration:underline; }
+section.right main dl dd    p span    strong { font-size:70px; }
+section.right main dl dd    iframe           { background-color:#fff; height:100vh; width:100%; }
