@@ -81,7 +81,6 @@
                                 소스코드.못 알아보겠다();<br />
                             }, oneYear);<br /><br />
                             
-                            <span>부트스트랩을 수정해서 사용</span><br />
                             <span><strong>"소스의 구조"</strong>가 뒤죽박죽</span>
                         </p>
                     </dd>
@@ -177,7 +176,7 @@
                             ************/<br />
                             <br />
                             $(document).ready(function() {<br />
-<br />
+                            <br />
 
                             /***********************<br />
                                 HTML 태그 생성 및 초기화<br />
@@ -195,7 +194,46 @@
                         </code>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>4. CSS 작성 형식 (계속)</span></h3>
+                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>4. 공통 부분 처리</span></h3>
+                        <p class="code">
+                            <code>
+                                /************<br />
+                                    변수 선언부<br />
+                                ************/<br />
+                                /* 공통 태그 직렬화 */<br />
+                                var skip   = '&lt;a href="#main" id="skip-nav"&gt;본문 바로가기&lt;/a&gt;';<br />
+                                var header = '&lt;header id="header"&gt; &lt;img src="{contextPath}/img/header.jpg" alt="헤더이미지" /&gt;...';<br />
+                                var footer = '&lt;div class="go-top"&gt; &lt;a href="#header"&gt;&lt;i class="fas fa-angle-up"&gt;&lt;/i&gt;&lt;/a&gt; &lt;/div&gt;&lt;footer&gt;...';<br />
+                                <br />
+                                'use strict';<br />
+                                $(document).ready(function() {<br />
+                                /************ 시작 ****************/<br />
+                                <br />
+                                /***********************<br />
+                                    HTML 태그 생성 및 초기화<br />
+                                ************************/<br />
+                                // 인덱스 페이지인지 서브페이지인지에 따라 contextPath를 조정한다<br />
+                                if(-1 &lt; window.location.href.indexOf('/page/')) {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;header = header.replace(/{contextPath}/gi, "../.."); <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;footer = footer.replace(/{contextPath}/gi, "../.."); <br />
+                                } else {<br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;header = header.replace(/{contextPath}/gi, "."); <br />
+                                &nbsp;&nbsp;&nbsp;&nbsp;footer = footer.replace(/{contextPath}/gi, "."); <br />
+                                }<br />
+                                <br />
+                                // skip 추가<br />
+                                $('body').prepend(skip);<br />
+                                // 헤더 추가<br />
+                                $('div.wrap').prepend(header);<br />
+                                // 푸터 추가<br />
+                                $('div.wrap').append(footer);<br />
+                                <br />
+                                ...
+                            </code>
+                        </code>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식 (계속)</span></h3>
                         <p class="code">
                             <code>
                                     @charset 'utf-8';<br />
@@ -247,7 +285,7 @@
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>4. CSS 작성 형식 (계속)</span></h3>
+                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식 (계속)</span></h3>
                         <p class="text">
                             <strong>중요하다고 생각하는 부분</strong><br /><br />
                             <span>"속성은 알파벳 순"으로 작성하였습니다.</span><br />
@@ -255,7 +293,7 @@
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>4. CSS 작성 형식</span></h3>
+                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식</span></h3>
                         <p class="code">
                             <code>
                                     ...<br />
@@ -282,7 +320,7 @@
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>5. 파일용량 줄이기</span></h3>
+                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>6. 파일용량 줄이기</span></h3>
                         <p class="text">
                             <strong>공백으로 인한 파일용량은 어떻게 할 것인가?</strong><br /><br />
                             <span>서버에 배포시 minifier 사용하여 Minimalize</span><br />
@@ -292,11 +330,11 @@
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>6. 왜?</span></h3>
+                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>7. 왜?</span></h3>
                         <p class="text">
                             <strong>6. 왜?</strong><br /><br />
-                            <span>안정적인 프로젝트 완료를 위해</span><br />
-                            <span>확장과 변경에 용이한 소프트웨어를 위해</span><br />
+                            <span>안정적으로 프로젝트를 완료하기 위헤</span><br />
+                            <span>확장과 변경에 용이한 소프트웨어를 제작하기 위해</span><br />
                             <span>남이 내 코드를 보고 욕할 것 같아서...</span><br />
                             <span>미래의 내가 내 코드를 보고 욕할 것 같아서...</span><br />
                         </p>
