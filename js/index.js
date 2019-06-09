@@ -54,9 +54,6 @@ function load(){
 function keyDownEvent(e){
     var leftDdLength = document.querySelectorAll('section.left dl dd').length;
     
-    console.log(e.keyCode);
-
-
     // 이전
     if(e.keyCode === 37 || e.keyCode === 38) {
         pageNow = pageNow - 1;

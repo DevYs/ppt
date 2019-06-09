@@ -42,7 +42,7 @@
             <main>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong> Git이란?</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>Git이란?</strong></dt>
                     <dd>
                         <h3 class="title sr-only"><i class="fas fa-code"></i> <span>VCS, SCM</span></h3>
                         <p class="text">
@@ -104,347 +104,208 @@
                 </dl>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong> 단점</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>얼마나 좋길래?</strong></dt>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>서버는 무엇?</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>BitKeeper를 무료로 전환시킨...</span></h3>
                         <p class="text">
-                            <span>URI경로로 보아...</span><br />
-                            <span>Spring?? Node.js??</span>
+                            <span>지못미 BitKeeper</span>
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Ajax의 리턴 타입</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>기존의 SVN</span></h3>
                         <p class="text">
-                            <span>ajax의 리턴타입이 html인 이유는?</span><br />
-                            <span>(개발한 퍼블리셔가 ajax를 몰랐을지도...)</span>
+                            <span>SVN</span><br /><br />
+                            <span>변경사항의 저장 및 관리를 서버에서...</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>템플릿 엔진은??</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>SVN - 서버 필수</span></h3>
                         <p class="text">
-                            <span>템플릿 엔진으로 인한 부하</span><br />
+                            <span>SVN</span><br /><br />
+                            <span>SVN서버가 연결되어있지 않으면 사용 못함</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>서버가 RESTful로 개발되었다면 하는 아쉬움이...</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>SVN - 복구의 어려움</span></h3>
                         <p class="text">
-                            <span>디자인이 변경되어도</span><br />
-                            <span>모바일 앱을 개발한다고 해도</span><br />
-                            <strong>서버를 변경할 필요가 없다.</strong>
+                            <span>SVN</span><br /><br />
+                            <span>서버가 날라가면 복구가 힘들다</span>
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>하지만 Git은?</span></h3>
+                        <p class="text">
+                            <span>Git</span><br /><br />
+                            <span>변경사항의 저장 및 관리를 로컬에서</span><br />
+                            <span>(git commit)</span>
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>GIT - 로컬에서 작업가능</span></h3>
+                        <p class="text">
+                            <span>Git</span><br /><br />
+                            <span>서버가 날라가도 '.git'을 통해 복구 가능</span><br />
+                            <span>(git reset HEAD^)</span>
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>GIT - 팀 단위개발과 공유 용도</span></h3>
+                        <p class="text">
+                            <span>Git</span><br /><br />
+                            <span>서버는 팀단위 개발과 백업을 위한 용도</span><br />
+                            <span>(git push, git pool)</span>
                         </p>
                     </dd>
                 </dl>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong> RESTful로 개발을 한다면?</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>어떨때 쓸까?</strong></dt>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>인증</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>작업을 나눠서 개발할때</span></h3>
                         <p class="text">
-                            <span>인증</span><br />
-                            <span>OAuth2와 같은 인증 처리 필요</span>
+                            <span>작업 분담</span><br /><br />
+                            <span>A부분 - 영희 (git branch feature-a)</span><br />
+                            <span>B부분 - 철수 (git branch feature-b)</span><br />
+                            <span>C부분 - 영수 (git branch feature-c)</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>보안</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>기능 단위로 작업할때</span></h3>
                         <p class="text">
-                            <span>보안</span><br />
-                            <span>SSL (HTTPS)</span>
+                            <span>기능 단위 작업</span><br /><br />
+                            <span>사용자 추가 (git branch feature-add-user)</span><br />
+                            <span>사용자 삭제 (git branch feature-remove-user)</span><br />
+                            <span>사용자 수정 (git branch feature-mod-user)</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>개발</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>버전별로 개발할때</span></h3>
                         <p class="text">
-                            <span>개발</span><br />
-                            <span>CORS 처리로 개발 편의성 확보</span>
-                        </p>
-                    </dd>
-                </dl>
-
-                <!-- <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>오뚜기 개발 진행방식</strong></dt>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>1. 집을 짓자</span></h3>
-                        <p class="text">
-                            <strong>1. 집을 짓자</strong><br /><br />
-                            <span>레이아웃 구조를 분석하자</span><br />
-                            <span>레이아웃 구조을 잡자</span><br />
-                            <span>(반응형일 경우 고려해서)</span>
+                            <span>버전별 작업</span><br /><br />
+                            <span>A버전 (git branch version-a)</span><br />
+                            <span>B버전 (git branch version-b)</span><br />
+                            <span>C버전 (git branch version-c)</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>2. 방을 꾸밀 준비를 하자</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>과거의 소스상태로 되돌릴때</span></h3>
                         <p class="text">
-                            <strong>2. 방을 꾸밀 준비를 하자</strong><br /><br />
-                            <span>콘텐츠 요소를 제작할 준비를 하자</span><br />
-                            <span>모든 화면의 콘텐츠 요소 정리하자</span><br />
+                            <span>소스관리 (버전관리)</span><br /><br />
+                            <span>현재 작업하던 부분이 취소</span><br />
+                            <span>이전 상태로 reset</span><br />
+                            <span>(git reset)</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>3. 방을 꾸미자</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>작업 내용을 통합</span></h3>
                         <p class="text">
-                            <strong>3. 방을 꾸미자</strong><br /><br />
-                            <span>하나의 페이지에 모든 요소를 개발하자</span><br /><br />
-                            <span>정리한 콘텐츠 요소들을 템플릿에 제작</span><br />
-                            <span>(반응형일 경우 고려해서)</span>
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>4. 페이지 제작</span></h3>
-                        <p class="text">
-                            <strong>4. 노가다 시작</strong><br /><br />
-                            <span>템플릿에 제작된 요소들로 페이지를 제작</span><br />
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>5. 오뚜기 제작기간</span></h3>
-                        <p class="text">
-                            <strong>5. 오뚜기 제작기간</strong><br /><br />
-                            <span>반응형으로 제작</span><br />
-                            <span>레이아웃 및 화면 요소 정리 (2일)</span><br />
-                            <span>템플릿 제작 (4일)</span><br />
-                            <span>페이지 제작 (3일)</span><br />
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>6. 안정적인 프로젝트의 진행과 진행속도</span></h3>
-                        <p class="text">
-                            <strong>6. 안정적인 프로젝트의 진행과 진행속도는 </strong><br /><br />
-                            <span>템플릿을 얼마나 잘 만드느냐에 달렸다.</span><br />
+                            <span>여러 사람이 개발한 내용을 통합할때</span><br />
+                            <span>(git merge)</span><br />
                         </p>
                     </dd>
                 </dl>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>오뚜기 개발</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>Git을 사용하기 전에...</strong></dt>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>1. 버전관리 (Version Control System)</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Git의 영역</span></h3>
                         <p class="text">
-                            <span>VCS : git</span><br />
-                            <span>VCS 서버 : github.com</span><br />
+                            <span>Working Directory</span><br />
+                            <span>Staging Area 또는 Index</span><br />
+                            <span>Repository 또는 .git 디렉토리</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>2. 개발툴</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Working Directory??</span></h3>
                         <p class="text">
-                            <strong>요즘 인싸 개발자들이 사용한다는 개발툴</strong><br />
-                            <br />
-                            <span>Visual Studio Code</span>
+                            <span>Working Directory</span><br /><br />
+                            <span>실제 작업 영역</span><br />
+                            <span>코딩하고 파일 추가하고...</span><br />
+                            <span>변경을 가하는 영역</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>3. 자바스크립트 작성 형식</span></h3>
-                        <p class="code">
-                            <code>
-                            'use strict';<br />
-                            /*<br />
-                                JS는 '변수 선언부', 'HTML 태그 생성부', '이벤트 선언부', '함수 선언부' 등의 4가지 영역으로 나누어 작성한다.<br />
-                                '모든 화면에서' 또는 '대부분의 화면에서' 공통으로 사용되는 부분은 같은 4가지 영역으로 새로이 JS 파일을 따로 작성하여 HTML 문서상의 가장 먼저 로드되도록 한다.<br />
-                            */<br />
-                            <br />
-                            /************<br />
-                                변수 선언부<br />
-                            ************/<br />
-                            <br />
-                            $(document).ready(function() {<br />
-                            <br />
-
-                            /***********************<br />
-                                HTML 태그 생성 및 초기화<br />
-                            ************************/<br />
-                            <br />
-                            /*************<br />
-                                이벤트 선언부<br />
-                            *************/<br />
-                            <br />
-                            });<br />
-                            <br />
-                            /************<br />
-                                함수 선언부<br />
-                            ************/<br />
-                        </code>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>4. 공통 부분 처리</span></h3>
-                        <p class="code">
-                            <code>
-                                /************<br />
-                                    변수 선언부<br />
-                                ************/<br />
-                                /* 공통 태그 직렬화 */<br />
-                                var skip   = '&lt;a href="#main" id="skip-nav"&gt;본문 바로가기&lt;/a&gt;';<br />
-                                var header = '&lt;header id="header"&gt; &lt;img src="{contextPath}/img/header.jpg" alt="헤더이미지" /&gt;...';<br />
-                                var footer = '&lt;div class="go-top"&gt; &lt;a href="#header"&gt;&lt;i class="fas fa-angle-up"&gt;&lt;/i&gt;&lt;/a&gt; &lt;/div&gt;&lt;footer&gt;...';<br />
-                                <br />
-                                'use strict';<br />
-                                $(document).ready(function() {<br />
-                                /************ 시작 ****************/<br />
-                                <br />
-                                /***********************<br />
-                                    HTML 태그 생성 및 초기화<br />
-                                ************************/<br />
-                                // 인덱스 페이지인지 서브페이지인지에 따라 contextPath를 조정한다<br />
-                                if(-1 &lt; window.location.href.indexOf('/page/')) {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;header = header.replace(/{contextPath}/gi, "../.."); <br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;footer = footer.replace(/{contextPath}/gi, "../.."); <br />
-                                } else {<br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;header = header.replace(/{contextPath}/gi, "."); <br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;footer = footer.replace(/{contextPath}/gi, "."); <br />
-                                }<br />
-                                <br />
-                                // skip 추가<br />
-                                $('body').prepend(skip);<br />
-                                // 헤더 추가<br />
-                                $('div.wrap').prepend(header);<br />
-                                // 푸터 추가<br />
-                                $('div.wrap').append(footer);<br />
-                                <br />
-                                ...
-                            </code>
-                        </code>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식 (계속)</span></h3>
-                        <p class="code">
-                            <code>
-                                    @charset 'utf-8';<br />
-                                    <br />
-                                    /********************<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;1 Depte > 2 Depth<br />
-                                    ********************/<br />
-                                    /* 3 Depth > 4 Depth > 5 Depth */<br />
-                                    /* selector { ... } */<br />
-                                    ... </br />
-                                    <br />
-                                    /* <br />
-                                    @media (max-width: 1200px) { ... }<br />
-                                    @media (max-width: 1024px) { ... }<br />
-                                    @media (max-width: 900px) { ... }<br />
-                                    @media (max-width: 800px) { ... }<br />
-                                    @media (max-width: 640px) { ... }<br />
-                                    */<br />
-                                    <br />
-                                    /*<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;Read me<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;1. 메뉴에 속하지 않는 단일 페이지의 스타일이 상위에 위치합니다.<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;2. 대메뉴(Depth1)와 중메뉴(Depth2) 주석 하단에 하위 메뉴(Depth3 이하)들의 스타일이 위치하게 됩니다.<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;3. HTML 문서의 요소들의 논리적인 순서에 맞게 스타일이 위치합니다.<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;4. 속성은 알파벳 순으로 작성하였습니다.<br />
-                                    &nbsp;&nbsp;&nbsp;&nbsp;5. 하단에는 반응형을 위한 미디어쿼리가 폭(max-width)이 큰 순서대로 작성하였습니다.<br />
-                                    */<br />
-                                    <br />
-                                    /********<br />
-                                        reset<br />
-                                    ********/<br />
-                                    <br />
-                                    /******<br />
-                                        공통<br />
-                                    ******/<br />
-                                    <br />
-                                    /*********<br />
-                                        좌측영역<br />
-                                    *********/<br />
-                                    section.left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ box-sizing:border-box; background-color:#29292A; height:100%; left:0; position:absolute; padding-top:30px; top:0px; width:20%; }<br />
-                                    section.left&nbsp;h2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ font-size:14px; padding:5px 10px; }<br />
-                                    section.left&nbsp;dl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ box-sizing:border-box; margin-top:2px; width:100%; }<br />
-                                    section.left&nbsp;dl&nbsp;dt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ background:#3B3B3B; margin-bottom:2px; padding:2px 10px; }<br />
-                                    section.left&nbsp;dl&nbsp;dt&nbsp;&nbsp;&nbsp;&nbsp;strong&nbsp;{ margin-left:5px; }<br />
-                                    section.left&nbsp;dl&nbsp;dd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ padding-left:24px; margin-bottom:2px; }<br />
-                                    section.left&nbsp;dl&nbsp;dd.on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ color:#fff; font-weight:900; }<br />
-                                    section.left&nbsp;dl&nbsp;dd&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ display:inline-block; text-align:center; width:20px; }<br />
-                            </code>
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식 (계속)</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Staging Area??</span></h3>
                         <p class="text">
-                            <strong>중요하다고 생각하는 부분</strong><br /><br />
-                            <span>"속성은 알파벳 순"으로 작성하였습니다.</span><br />
-                            <span>"셀렉터 영역과 속성 영역을 명확"하게 분리합니다.</span>
+                            <span>Staging Area</span><br /><br />
+                            <span>작업한 내용들 중 저장하려고 고른 내용들의 영역</span><br />
+                            <span>(작업한한 것중에 커밋할걸 골라볼까?)</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-css3-alt"></i> <span>5. CSS 작성 형식</span></h3>
-                        <p class="code">
-                            <code>
-                                    ...<br />
-                                    ...<br />
-                                    /******<br />
-                                        공통<br />
-                                    ******/<br />
-                                    ...<br />
-                                    <br />
-                                    /*********<br />
-                                        좌측영역<br />
-                                    *********/<br />
-                                    section.left&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ box-sizing:border-box; background-color:#29292A; height:100%; left:0; position:absolute; padding-top:30px; top:0px; width:20%; }<br />
-                                    section.left&nbsp;h2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ font-size:14px; padding:5px 10px; }<br />
-                                    section.left&nbsp;dl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ box-sizing:border-box; margin-top:2px; width:100%; }<br />
-                                    section.left&nbsp;dl&nbsp;dt&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ background:#3B3B3B; margin-bottom:2px; padding:2px 10px; }<br />
-                                    section.left&nbsp;dl&nbsp;dt&nbsp;&nbsp;&nbsp;&nbsp;strong&nbsp;{ margin-left:5px; }<br />
-                                    section.left&nbsp;dl&nbsp;dd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ padding-left:24px; margin-bottom:2px; }<br />
-                                    section.left&nbsp;dl&nbsp;dd.on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ color:#fff; font-weight:900; }<br />
-                                    section.left&nbsp;dl&nbsp;dd&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ display:inline-block; text-align:center; width:20px; }<br />
-                                    <br />
-                                    ...<br />
-                            </code>
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>6. 파일용량 줄이기</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>.git Repository</span></h3>
                         <p class="text">
-                            <strong>공백으로 인한 파일용량은 어떻게 할 것인가?</strong><br /><br />
-                            <span>서버에 배포시 minifier 사용하여 Minimalize</span><br />
-                            <span>공백을 없애주는 <strong>minifier</strong></span><br />
-                            <span>소스를 이쁘게 만들어주는 <strong>beautifier</strong></span><br />
-                            <span>HTML, CSS, JS 웹에서 모두 가능</span>
-                        </p>
-                    </dd>
-                    <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>7. 왜?</span></h3>
-                        <p class="text">
-                            <strong>6. 왜?</strong><br /><br />
-                            <span>안정적으로 프로젝트를 완료하기 위헤</span><br />
-                            <span>확장과 변경에 용이한 소프트웨어를 제작하기 위해</span><br />
-                            <span>남이 내 코드를 보고 욕할 것 같아서...</span><br />
-                            <span>미래의 내가 내 코드를 보고 욕할 것 같아서...</span><br />
+                            <span>.git Directory 또는 레포지터리</span><br /><br />
+                            <span>저장하려고 고른 내용을 저장한 영역</span><br /><br />
+                            <span>이력을 남긴다</span><br /><br />
+                            <span>(커밋!!)</span><br /><br />
                         </p>
                     </dd>
                 </dl>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong> 시간이 남는다면...</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>Git 명령</strong></dt>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>1. HTTPS와 SSL</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Git 프로젝트를 만들자</span></h3>
                         <p class="text">
-                            <strong>1. HTTPS와 SSL</strong><br /><br />
-                            <span><strong>가까운 미래에 모든 웹서비스는<br />HTTPS 프로토콜을 갖게 될 것</strong></span>
+                            <span>git init</span><br /><br />
+                            <span>git 프로젝트 생성</span><br />
+                            <span>변경사항이 저장되는 .git 디렉터리가 생성</span><br />
                         </p>
                     </dd>
                     <dd>
-                        <h3 class="title sr-only"><i class="fab fa-js-square"></i> <span>2. 템플릿 엔진이 서버에 주는 영향</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>작업한 내용을 골라내자</span></h3>
                         <p class="text">
-                            <strong>2. 템플릿 엔진이 서버에 주는 영향</strong><br /><br />
-                            <span>공통 부분을 위해 사용하지만...</span><br />
-                            <span>만약 ajax로 통신하면?</span><br />
-                            <span><strong>미래엔 결국 템플릿 엔진은 사장될 것이다</strong></span>
+                            <span>git add</span><br /><br />
+                            <span>commit할 파일을 결정</span><br />
+                            <span>(git add a.txt)</span><br />
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>작업 내용을 저장하자</span></h3>
+                        <p class="text">
+                            <span>git commit</span><br /><br />
+                            <span>커밋하려고 골라낸 작업한 파일들을 저장</span><br />
+                            <span>(git commit -m '작업한 내용'</span><br />
                         </p>
                     </dd>
                 </dl>
 
                 <dl>
-                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong> 끝</strong></dt>
+                    <dt class="sr-only"><i class="fas fa-caret-down"></i><strong>VSCODE Git</strong></dt>
                     <dd>
-                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>끝으로</span></h3>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>VSCODE는 Git을 기본으로 지원</span></h3>
                         <p class="text">
-                            <span>끝으로</span><br />
-                            <strong>들어주시느라 수고하셨습니다.</strong>
+                            <span><img src="img/activity-bar.png" alt="Activity Bar" /></span><br />
                         </p>
                     </dd>
-                </dl> -->
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Git 탭</span></h3>
+                        <p class="text">
+                            <span><img src="img/git-change.png" alt="git change" /></span><br />
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>Git 메뉴</span></h3>
+                        <p class="text">
+                            <span><img src="img/vscode-git-menu.png" alt="git change" /></span><br />
+                        </p>
+                    </dd>
+                    <dd>
+                        <h3 class="title sr-only"><i class="fas fa-code"></i> <span>먼저 알아야할 기능</span></h3>
+                        <p class="text">
+                            <span>Commit All</span><br />
+                            <span>Commit Staged</span><br />
+                            <span>Discard All Changes</span><br />
+                            <span>Stage All Changes</span><br />
+                            <span>Unstage All Changes</span><br />
+                        </p>
+                    </dd>
+                </dl>
+
 
             </main>
         </section>
     </div>
 </body>
-
 </html>
