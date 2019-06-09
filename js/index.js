@@ -10,34 +10,55 @@
 ************/
 var pageNow = 0;
 
-$(document).ready(function() {
-/************ 시작 ****************/
-/***********************
-    HTML 태그 생성 및 초기화
-************************/
-for(var i=1; i<=100; i++) {
-    $('section.right ul.line').append('<li>' + i + '</li>');
+ready(load);
+
+/************
+	함수 선언부
+************/
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
 }
 
-$('section.left dl').empty();
-$('section.right main dl').each(function() {
-    var dt = '<dt>' + $(this).find('dt').html() + '</dt>'; 
-    $('section.left dl').append(dt);
+function load(){
+    for(var i=1; i<=100; i++) {
+        var childLi = document.createElement('li');
+        childLi.textContent = i;
+        document.querySelector('section.right ul.line').appendChild(childLi);
+    }
 
-    $(this).find('dd').each(function() {
-        var h3 = '<dd>' + $(this).find('h3').html() + '</dd>';
-        console.log(h3);
-        $('section.left dl').append(h3);
-    });
-});
-$('section.left dl dd').eq(0).addClass('on');
+    document.querySelector('section.left dl').innerHTML = '';
+    var mainDlList = document.querySelectorAll('section.right main dl');
+    Array.prototype.forEach.call(mainDlList, function(dl, dlIndex){
+        var dt = document.createElement('dt');
+        dt.textContent = dl.querySelector('dt strong').innerHTML;
+        document.querySelector('section.left dl').appendChild(dt);
 
-/*************
-    이벤트 선언부
-*************/
-$(document).on('keydown', function(e) {
+        var ddList = dl.querySelectorAll('dd');
+        Array.prototype.forEach.call(ddList, function(dd, ddIndex){
+            var childDd = document.createElement('dd');
+            childDd.innerHTML = dd.querySelector('h3').innerHTML;
+            document.querySelector('section.left dl').appendChild(childDd);
+        }); 
+    }); 
+
+    document.querySelectorAll('section.left dl dd')[0].classList.add('on');
+    document.querySelectorAll('section.right dl dd')[0].classList.add('on');
+    document.addEventListener('keydown',keyDownEvent);
+}
+
+function keyDownEvent(e){
+    var leftDdLength = document.querySelectorAll('section.left dl dd').length;
+    
+    console.log(e.keyCode);
+
+
     // 이전
-    if(e.keyCode === 37) {
+    if(e.keyCode === 37 || e.keyCode === 38) {
         pageNow = pageNow - 1;
         if(pageNow < 0) {
             pageNow = 0;
@@ -45,23 +66,30 @@ $(document).on('keydown', function(e) {
     } 
     
     // 다음
-    if(e.keyCode === 39) {
+    if(e.keyCode === 39 || e.keyCode === 40) {
         pageNow = pageNow + 1;
-        if($('section.left dl dd').length - 1 < pageNow) {
-            pageNow = $('section.left dl dd').length;
+        if(leftDdLength - 1 < pageNow) {
+            pageNow = leftDdLength;
         }
     }
-    
-    if(-1 < pageNow && pageNow < $('section.left dl dd').length) {
-        $('section.left dl dd').removeClass('on').eq(pageNow).addClass('on');
-        $('section.right dl dd').removeClass('on').eq(pageNow).addClass('on');      
+   
+    if(-1 < pageNow && pageNow < leftDdLength) {
+        var leftDdList = document.querySelectorAll('section.left dl dd');
+        var rightDdList = document.querySelectorAll('section.right dl dd');
+
+        Array.prototype.forEach.call(leftDdList, function(leftDd, leftDdIndex){
+            leftDd.classList.remove('on');
+            if(pageNow === leftDdIndex){
+                leftDd.classList.add('on');
+            }
+        });
+        Array.prototype.forEach.call(rightDdList, function(rightDd, rightDdIndex){ 
+            rightDd.classList.remove('on');
+            if(pageNow === rightDdIndex){
+                rightDd.classList.add('on');
+            }
+        });
     }
-    
-});
+}
 
-/***************** 종료 ***************/
-});
 
-/************
-	함수 선언부
-************/
