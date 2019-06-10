@@ -23,6 +23,7 @@ body      { background-color:#323232; color:#929292; font-family:'Noto Sans KR',
 #skip-nav:focus   { top:0; }
 .indent1          { margin-left:30px; }
 .indent2          { margin-left:60px; }
+.half             { width:50%; }
 
 /****** 
     화면
