@@ -25,7 +25,7 @@ body      { background-color:#323232; color:#929292; font-family:'Noto Sans KR',
 .indent2          { margin-left:60px; }
 
 /****** 
-    화면
+    화면100%
 ******/
 div.wrap { height:100%; overflow:hidden; width:100%; }
 
